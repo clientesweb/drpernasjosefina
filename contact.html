@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Dra. Josefina Pernas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="brain-logo.svg" alt="Logo" width="40" height="40">
+                    <span>Dra. Josefina Pernas</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">Sobre mí</a></li>
+                    <li><a href="index.html#services">Servicios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+                <button class="mobile-menu-button">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-page">
+            <div class="container">
+                <h1>Contacto</h1>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Información de Contacto</h2>
+                        <ul>
+                            <li><i data-lucide="phone"></i> +123 456 789</li>
+                            <li><i data-lucide="mail"></i> contacto@example.com</li>
+                            <li><i data-lucide="map-pin"></i> Calle Ejemplo 123, Ciudad, País</li>
+                        </ul>
+                        <h2>Horarios de Atención</h2>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábados: 9:00 - 13:00</p>
+                    </div>
+                    <form class="contact-form">
+                        <h2>Envíanos un Mensaje</h2>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="button">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <img src="brain-logo.svg" alt="Logo" width="40" height="40">
+                        <span>Dra. Josefina Pernas</span>
+                    </a>
+                    <p>Psiquiatra especializada en salud mental. Consultas presenciales y virtuales.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html#about">Sobre mí</a></li>
+                        <li><a href="index.html#services">Servicios</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i data-lucide="phone"></i> +123 456 789</li>
+                        <li><i data-lucide="mail"></i> contacto@example.com</li>
+                        <li><i data-lucide="instagram"></i> @drapernasjosefina</li>
+                        <li><i data-lucide="map-pin"></i> Consulta Presencial</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes<br>9:00 - 18:00</p>
+                    <p>Sábados<br>9:00 - 13:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Dra. Josefina Pernas. Todos los derechos reservados.</p>
+                <p>Powered by <a href="https://dualitydomain.com" target="_blank" rel="noopener noreferrer">Duality Domain</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
