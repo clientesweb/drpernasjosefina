@@ -26,10 +26,7 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FF9B7B' },
-    { media: '(prefers-color-scheme: dark)', color: '#FF9B7B' },
-  ],
+  themeColor: '#FF9B7B',
   appleWebApp: {
     title: 'Dra. Josefina Pernas',
     statusBarStyle: 'default',
@@ -50,6 +47,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF9B7B" />
         <meta name="msapplication-TileColor" content="#FF9B7B" />
+        <meta name="theme-color" content="#FF9B7B" />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         <TopBanner />
