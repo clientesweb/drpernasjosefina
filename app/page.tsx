@@ -4,7 +4,7 @@ import { InstagramFeed } from "@/components/instagram-feed"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Brain, Users, Calendar, PenTool, Star, Award, BookOpen } from 'lucide-react'
+import { Brain, Users, Video, Star, Award, BookOpen } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
 
@@ -48,7 +48,7 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader>
-                <Calendar className="h-12 w-12 text-primary mb-4" />
+                <Video className="h-12 w-12 text-primary mb-4" />
                 <CardTitle>Consultas Online</CardTitle>
               </CardHeader>
               <CardContent>
