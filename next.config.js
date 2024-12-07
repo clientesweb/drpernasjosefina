@@ -3,8 +3,20 @@ const nextConfig = {
   images: {
     domains: ['localhost', 'images.unsplash.com'],
   },
-  // Add output configuration for static export
-  output: 'standalone',
+  // Enable static exports
+  output: 'export',
+  // Disable image optimization for static export
+  images: {
+    unoptimized: true,
+  },
+  // Ensure CSS modules work with static export
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
+    });
+    return config;
+  },
 }
 
 module.exports = nextConfig
