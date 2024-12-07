@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Josefina Pernas - Psiquiatra</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Dra. Josefina Pernas - Psiquiatra Especializada</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.lucide.dev/lucide.esm.js"></script>
 </head>
 <body>
     <div class="top-banner">
@@ -25,7 +24,7 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
-                <button class="mobile-menu-button" aria-expanded="false">
+                <button class="mobile-menu-button" aria-label="Abrir menú">
                     <i data-lucide="menu"></i>
                 </button>
             </nav>
@@ -33,30 +32,14 @@
     </header>
 
     <main>
-        <section class="hero-slider">
-            <div class="slide active">
-                <img src="slide-1.jpg" alt="Salud Mental Integral">
-                <div class="slide-content">
-                    <h2>Salud Mental Integral</h2>
-                    <p>Cuidando tu bienestar emocional</p>
+        <section class="hero" style="background-image: url('hero-image.jpg');">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Salud Mental Integral</h1>
+                    <p>Cuidando tu bienestar emocional con un enfoque personalizado</p>
+                    <a href="contact.html" class="button">Agendar Consulta</a>
                 </div>
             </div>
-            <div class="slide">
-                <img src="slide-2.jpg" alt="Terapia Personalizada">
-                <div class="slide-content">
-                    <h2>Terapia Personalizada</h2>
-                    <p>Enfoque adaptado a tus necesidades</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="slide-3.jpg" alt="Consultas Online">
-                <div class="slide-content">
-                    <h2>Consultas Online</h2>
-                    <p>Atención profesional desde cualquier lugar</p>
-                </div>
-            </div>
-            <button class="slider-arrow prev"><i data-lucide="chevron-left"></i></button>
-            <button class="slider-arrow next"><i data-lucide="chevron-right"></i></button>
         </section>
 
         <section id="services" class="services">
@@ -66,17 +49,17 @@
                     <div class="service-card">
                         <i data-lucide="brain"></i>
                         <h3>Terapia Individual</h3>
-                        <p>Sesiones personalizadas para abordar tus necesidades específicas.</p>
+                        <p>Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.</p>
                     </div>
                     <div class="service-card">
                         <i data-lucide="users"></i>
                         <h3>Terapia de Pareja</h3>
-                        <p>Mejora tu relación y fortalece los lazos con tu pareja.</p>
+                        <p>Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.</p>
                     </div>
                     <div class="service-card">
                         <i data-lucide="video"></i>
                         <h3>Consultas Online</h3>
-                        <p>Atención profesional desde la comodidad de tu hogar.</p>
+                        <p>Atención profesional desde la comodidad de tu hogar con nuestras sesiones virtuales.</p>
                     </div>
                 </div>
             </div>
@@ -90,24 +73,10 @@
                     <div class="about-text">
                         <ul>
                             <li><i data-lucide="check"></i> Más de 15 años de experiencia en psiquiatría</li>
-                            <li><i data-lucide="check"></i> Enfoque integral y personalizado</li>
-                            <li><i data-lucide="check"></i> Formación continua en técnicas terapéuticas</li>
+                            <li><i data-lucide="check"></i> Enfoque integral y personalizado para cada paciente</li>
+                            <li><i data-lucide="check"></i> Formación continua en las últimas técnicas terapéuticas</li>
                         </ul>
                         <a href="about.html" class="button">Conoce más sobre mí</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="video-section">
-            <div class="container">
-                <h2>Recursos y Charlas</h2>
-                <div class="video-grid">
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -116,7 +85,7 @@
         <section class="testimonials">
             <div class="container">
                 <h2>Testimonios de Pacientes</h2>
-                <div class="testimonial-grid">
+                <div class="testimonial-slider">
                     <div class="testimonial-card">
                         <p>"La Dra. Pernas me ha ayudado enormemente a superar mi ansiedad. Su enfoque cálido y profesional me hizo sentir cómoda desde la primera sesión."</p>
                         <span>- María L.</span>
@@ -132,13 +101,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="instagram-feed">
-            <div class="container">
-                <h2>Sígueme en Instagram</h2>
-                <div id="instagramFeed" class="instagram-grid"></div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -152,7 +114,7 @@
                     <p>Psiquiatra especializada en salud mental. Consultas presenciales y virtuales.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Navegación</h3>
+                    <h3>Enlaces Rápidos</h3>
                     <ul>
                         <li><a href="about.html">Sobre mí</a></li>
                         <li><a href="#services">Servicios</a></li>
@@ -171,20 +133,23 @@
                 </div>
                 <div class="footer-section">
                     <h3>Horarios</h3>
-                    <p>Lunes a Viernes<br>9:00 - 18:00</p>
-                    <p>Sábados<br>9:00 - 13:00</p>
+                    <p>Lunes a Viernes: 9:00 - 18:00</p>
+                    <p>Sábados: 9:00 - 13:00</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Dra. Josefina Pernas. Todos los derechos reservados.</p>
+                <p class="powered-by">Powered by <a href="https://dualitydomain.com" target="_blank" rel="noopener noreferrer">Duality Domain</a></p>
             </div>
         </div>
     </footer>
 
     <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
-        <i data-lucide="message-circle"></i>
+        <img src="whatsapp-logo.png" alt="WhatsApp">
+        <span class="whatsapp-notification">1</span>
     </a>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="main.js"></script>
 </body>
 </html>
