@@ -4,60 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dra. Josefina Pernas - Psiquiatra Especializada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.lucide.dev/lucide.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <div class="top-banner">
-        ¡Bienvenidos a la consulta de la Dra. Josefina Pernas!
-    </div>
-    <header>
+    <header class="header">
         <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="brain-logo.svg" alt="Logo" width="40" height="40">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="brain-logo.svg" alt="Logo Dra. Josefina Pernas" width="40" height="40">
                     <span>Dra. Josefina Pernas</span>
                 </a>
-                <ul class="nav-links">
-                    <li><a href="about.html">Sobre mí</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                </ul>
-                <button class="mobile-menu-button" aria-label="Abrir menú">
-                    <i data-lucide="menu"></i>
+                <button class="navbar-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
                 </button>
+                <ul class="nav-menu">
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#testimonials">Testimonios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero" style="background-image: url('hero-image.jpg');">
+        <section id="hero" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Salud Mental Integral</h1>
-                    <p>Cuidando tu bienestar emocional con un enfoque personalizado</p>
-                    <a href="contact.html" class="button">Agendar Consulta</a>
+                    <h1 class="hero-title">Salud Mental Integral</h1>
+                    <p class="hero-subtitle">Cuidando tu bienestar emocional con un enfoque personalizado</p>
+                    <a href="#contact" class="btn btn-primary">Agendar Consulta</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Sobre Dra. Josefina Pernas</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="dra-josefina-pernas.jpg" alt="Dra. Josefina Pernas" width="400" height="500">
+                    </div>
+                    <div class="about-text">
+                        <p>Con más de 15 años de experiencia en psiquiatría, me dedico a ayudar a mis pacientes a superar desafíos emocionales y mentales. Mi enfoque se centra en un tratamiento integral que combina la terapia tradicional con técnicas innovadoras.</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check"></i> Especializada en trastornos de ansiedad y depresión</li>
+                            <li><i class="fas fa-check"></i> Enfoque personalizado para cada paciente</li>
+                            <li><i class="fas fa-check"></i> Formación continua en técnicas terapéuticas avanzadas</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="services" class="services">
             <div class="container">
-                <h2>Servicios Especializados</h2>
+                <h2 class="section-title">Servicios Especializados</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <i data-lucide="brain"></i>
+                        <i class="fas fa-brain"></i>
                         <h3>Terapia Individual</h3>
                         <p>Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.</p>
                     </div>
                     <div class="service-card">
-                        <i data-lucide="users"></i>
+                        <i class="fas fa-users"></i>
                         <h3>Terapia de Pareja</h3>
                         <p>Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.</p>
                     </div>
                     <div class="service-card">
-                        <i data-lucide="video"></i>
+                        <i class="fas fa-video"></i>
                         <h3>Consultas Online</h3>
                         <p>Atención profesional desde la comodidad de tu hogar con nuestras sesiones virtuales.</p>
                     </div>
@@ -65,49 +83,69 @@
             </div>
         </section>
 
-        <section class="about-preview">
+        <section id="testimonials" class="testimonials">
             <div class="container">
-                <h2>¿Por qué elegir a la Dra. Josefina Pernas?</h2>
-                <div class="about-content">
-                    <img src="dra-josefina-pernas.jpg" alt="Dra. Josefina Pernas">
-                    <div class="about-text">
-                        <ul>
-                            <li><i data-lucide="check"></i> Más de 15 años de experiencia en psiquiatría</li>
-                            <li><i data-lucide="check"></i> Enfoque integral y personalizado para cada paciente</li>
-                            <li><i data-lucide="check"></i> Formación continua en las últimas técnicas terapéuticas</li>
-                        </ul>
-                        <a href="about.html" class="button">Conoce más sobre mí</a>
+                <h2 class="section-title">Testimonios de Pacientes</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <p>"La Dra. Pernas me ha ayudado enormemente a superar mi ansiedad. Su enfoque cálido y profesional me hizo sentir cómoda desde la primera sesión."</p>
+                        <div class="testimonial-author">
+                            <img src="patient1.jpg" alt="María L." width="50" height="50">
+                            <span>María L.</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Gracias a la terapia con la Dra. Josefina, he podido mejorar significativamente mis relaciones personales y laborales. Su guía ha sido invaluable."</p>
+                        <div class="testimonial-author">
+                            <img src="patient2.jpg" alt="Carlos G." width="50" height="50">
+                            <span>Carlos G.</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Las sesiones online con la Dra. Pernas han sido una bendición. Puedo recibir ayuda de calidad sin salir de casa, lo cual es perfecto para mi agenda ocupada."</p>
+                        <div class="testimonial-author">
+                            <img src="patient3.jpg" alt="Laura S." width="50" height="50">
+                            <span>Laura S.</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="testimonials">
+        <section id="contact" class="contact">
             <div class="container">
-                <h2>Testimonios de Pacientes</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial-card">
-                        <p>"La Dra. Pernas me ha ayudado enormemente a superar mi ansiedad. Su enfoque cálido y profesional me hizo sentir cómoda desde la primera sesión."</p>
-                        <span>- María L.</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Gracias a la terapia con la Dra. Josefina, he podido mejorar significativamente mis relaciones personales y laborales. Su guía ha sido invaluable."</p>
-                        <span>- Carlos G.</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Las sesiones online con la Dra. Pernas han sido una bendición. Puedo recibir ayuda de calidad sin salir de casa, lo cual es perfecto para mi agenda ocupada."</p>
-                        <span>- Laura S.</span>
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Mensaje" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+123 456 789</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contacto@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Consulta Presencial, Ciudad</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="index.html" class="logo">
+                    <a href="#" class="logo">
                         <img src="brain-logo.svg" alt="Logo" width="40" height="40">
                         <span>Dra. Josefina Pernas</span>
                     </a>
@@ -116,25 +154,20 @@
                 <div class="footer-section">
                     <h3>Enlaces Rápidos</h3>
                     <ul>
-                        <li><a href="about.html">Sobre mí</a></li>
+                        <li><a href="#about">Sobre mí</a></li>
                         <li><a href="#services">Servicios</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="#testimonials">Testimonios</a></li>
+                        <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <ul>
-                        <li><i data-lucide="phone"></i> +123 456 789</li>
-                        <li><i data-lucide="mail"></i> contacto@example.com</li>
-                        <li><i data-lucide="instagram"></i> @drapernasjosefina</li>
-                        <li><i data-lucide="map-pin"></i> Consulta Presencial</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Horarios</h3>
-                    <p>Lunes a Viernes: 9:00 - 18:00</p>
-                    <p>Sábados: 9:00 - 13:00</p>
+                    <h3>Sígueme</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -144,12 +177,12 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
-        <img src="whatsapp-logo.png" alt="WhatsApp">
+    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-notification">1</span>
     </a>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="main.js"></script>
 </body>
 </html>
+
