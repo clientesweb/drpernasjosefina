@@ -8,7 +8,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <MobileNav />
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href="/" className="mr-6 flex items-center space-x-2 md:mr-0 w-full justify-center md:justify-start">
           <Image
             src="/brain-logo.svg"
             alt="Logo"
@@ -16,7 +16,7 @@ export function Header() {
             height={40}
             className="h-8 w-8"
           />
-          <span className="font-playfair text-xl font-bold hidden sm:inline-block">
+          <span className="font-playfair text-xl font-bold inline-block">
             Dra. Josefina Pernas
           </span>
         </Link>
