@@ -12,7 +12,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/brain-logo.svg"
+                src="/logo.png"
                 alt="Logo"
                 width={40}
                 height={40}
