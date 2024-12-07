@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 export function Footer() {
   return (
@@ -43,36 +45,43 @@ export function Footer() {
             <h3 className="font-bold mb-4">Contacto</h3>
             <div className="space-y-2">
               <a href="tel:+123456789" className="flex items-center text-muted-foreground hover:text-primary">
-                <Phone className="h-4 w-4 mr-2" />
+                <FontAwesomeIcon icon={faPhone} className="h-4 w-4 mr-2" />
                 +123 456 789
               </a>
               <a href="mailto:contacto@example.com" className="flex items-center text-muted-foreground hover:text-primary">
-                <Mail className="h-4 w-4 mr-2" />
+                <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 mr-2" />
                 contacto@example.com
               </a>
               <a href="https://instagram.com/drapernasjosefina" className="flex items-center text-muted-foreground hover:text-primary">
-                <Instagram className="h-4 w-4 mr-2" />
+                <FontAwesomeIcon icon={faInstagram} className="h-4 w-4 mr-2" />
                 @drapernasjosefina
               </a>
               <a href="https://maps.google.com" className="flex items-center text-muted-foreground hover:text-primary">
-                <MapPin className="h-4 w-4 mr-2" />
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="h-4 w-4 mr-2" />
                 Consulta Presencial
               </a>
             </div>
           </div>
           <div>
-            <h3 className="font-bold mb-4">Horarios</h3>
-            <div className="space-y-2 text-muted-foreground">
-              <p>Lunes a Viernes</p>
-              <p>9:00 - 18:00</p>
-              <p>Sábados</p>
-              <p>9:00 - 13:00</p>
+            <h3 className="font-bold mb-4">Síguenos</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="text-muted-foreground hover:text-primary">
+                <FontAwesomeIcon icon={faFacebookF} className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary">
+                <FontAwesomeIcon icon={faTwitter} className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary">
+                <FontAwesomeIcon icon={faLinkedinIn} className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary">
+                <FontAwesomeIcon icon={faInstagram} className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Dra. Josefina Pernas. Todos los derechos reservados.</p>
-          <p className="mt-2">Powered by <a href="https://dualitydomain.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Duality Domain</a></p>
         </div>
       </div>
     </footer>
