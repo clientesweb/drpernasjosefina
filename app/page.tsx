@@ -15,8 +15,7 @@ export default function Home() {
     { title: 'Terapia Individual', icon: <Brain />, description: 'Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.' },
     { title: 'Terapia de Pareja', icon: <Users />, description: 'Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.' },
     { title: 'Consultas Online', icon: <Video />, description: 'Accede a terapia de calidad desde la comodidad de tu hogar con nuestras sesiones virtuales.' },
-    { title: 'Otro Servicio', icon: <BookOpen />, description: 'Descripción del cuarto servicio' },
-    // Add more services here...
+    { title: 'Terapia Grupal', icon: <Users />, description: 'Participa en sesiones grupales para compartir experiencias y aprender de otros en un ambiente de apoyo.' },
   ];
 
   return (
@@ -90,6 +89,9 @@ export default function Home() {
 
       <section className="py-12 md:py-20">
         <div className="container px-4">
+          <h2 className="font-playfair text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+            Recursos y Charlas
+          </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
             {[...Array(4)].map((_, index) => (
               <div key={index} className="aspect-video">
@@ -104,6 +106,11 @@ export default function Home() {
                 />
               </div>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Button asChild>
+              <Link href="/resources">Ver más recursos</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -126,7 +133,10 @@ export default function Home() {
       <FAQSection />
       <section className="py-12 md:py-20">
         <div className="container px-4">
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+          <h2 className="font-playfair text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+            Síguenos en Instagram
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[...Array(4)].map((_, index) => (
               <blockquote
                 key={index}
