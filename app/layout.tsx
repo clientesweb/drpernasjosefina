@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { TopBanner } from "@/components/top-banner"
 import type { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
+        <TopBanner />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
