@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Button } from "@/components/ui/button"
@@ -15,14 +15,16 @@ const formSchema = z.object({
   message: z.string().min(10, { message: "El mensaje debe tener al menos 10 caracteres." }),
 })
 
+type FormSchemaType = z.infer<typeof formSchema>;
+
 export default function ContactPage() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { showToast } = useToast()
 
-  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+  const onSubmit: SubmitHandler<FormSchemaType> = async (data) => {
     setIsSubmitting(true)
     try {
       const response = await fetch("https://formspree.io/f/your-form-id", {
