@@ -34,13 +34,13 @@ export function HeroSlider() {
     return () => clearInterval(timer)
   }, [])
 
-  function next() {
-    setCurrent((current + 1) % slides.length)
-  }
+  // function next() {
+  //   setCurrent((current + 1) % slides.length)
+  // }
 
-  function previous() {
-    setCurrent((current - 1 + slides.length) % slides.length)
-  }
+  // function previous() {
+  //   setCurrent((current - 1 + slides.length) % slides.length)
+  // }
 
   return (
     <div className="relative h-[1080px] w-full overflow-hidden">
@@ -62,13 +62,13 @@ export function HeroSlider() {
           <div className="absolute inset-0 flex items-center">
             <div className="container px-4">
               <div className="max-w-xl text-white space-y-6">
-                <h2 className="font-playfair text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+                <h2 className="font-playfair text-5xl sm:text-6xl md:text-7xl font-bold leading-tight animate-fade-in-up">
                   {slide.title}
                 </h2>
-                <p className="text-xl sm:text-2xl md:text-3xl">
+                <p className="text-xl sm:text-2xl md:text-3xl animate-fade-in-up animation-delay-300">
                   {slide.description}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-500">
                   <Button size="lg" asChild>
                     <Link href="/contact">Agendar Consulta</Link>
                   </Button>
@@ -81,7 +81,7 @@ export function HeroSlider() {
           </div>
         </div>
       ))}
-      <Button
+      {/* <Button
         variant="ghost"
         size="icon"
         className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
@@ -98,7 +98,7 @@ export function HeroSlider() {
       >
         <ChevronRight className="h-8 w-8" />
         <span className="sr-only">Next slide</span>
-      </Button>
+      </Button> */}
     </div>
   )
 }
