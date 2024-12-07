@@ -4,3 +4,13 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_USE_NETLIFY_EDGE = "true"
+
+[build.processing.html]
+  pretty_urls = true
+
+[[edge_functions]]
+  function = "next-dev"
+  path = "/*"
