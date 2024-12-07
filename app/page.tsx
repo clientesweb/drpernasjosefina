@@ -11,6 +11,14 @@ import Link from "next/link"
 import { FAQSection } from "@/components/faq-section"
 
 export default function Home() {
+  const services = [
+    { title: 'Terapia Individual', icon: <Brain />, description: 'Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.' },
+    { title: 'Terapia de Pareja', icon: <Users />, description: 'Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.' },
+    { title: 'Consultas Online', icon: <Video />, description: 'Accede a terapia de calidad desde la comodidad de tu hogar con nuestras sesiones virtuales.' },
+    { title: 'Otro Servicio', icon: <BookOpen />, description: 'Descripción del cuarto servicio' },
+    // Add more services here...
+  ];
+
   return (
     <>
       <HeroSlider />
@@ -25,40 +33,20 @@ export default function Home() {
               Ofrecemos una amplia gama de servicios para cuidar tu salud mental y bienestar emocional
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="transition-all duration-300 hover:shadow-lg">
-              <CardHeader>
-                <Brain className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Terapia Individual</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg">
-              <CardHeader>
-                <Users className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Terapia de Pareja</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg">
-              <CardHeader>
-                <Video className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Consultas Online</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Accede a terapia de calidad desde la comodidad de tu hogar con nuestras sesiones virtuales.
-                </CardDescription>
-              </CardContent>
-            </Card>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+            {services.slice(0, 4).map((service, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardHeader>
+                  {service.icon}
+                  <CardTitle>{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -100,7 +88,26 @@ export default function Home() {
         </div>
       </section>
 
-      <VideoSection />
+      <section className="py-12 md:py-20">
+        <div className="container px-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+            {[...Array(4)].map((_, index) => (
+              <div key={index} className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title={`Video ${index + 1}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       <section className="py-12 md:py-20">
         <div className="container px-4">
@@ -117,7 +124,20 @@ export default function Home() {
       </section>
 
       <FAQSection />
-      <InstagramFeed />
+      <section className="py-12 md:py-20">
+        <div className="container px-4">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+            {[...Array(4)].map((_, index) => (
+              <blockquote
+                key={index}
+                className="instagram-media"
+                data-instgrm-permalink={`https://www.instagram.com/p/your-post-id-${index + 1}/`}
+                data-instgrm-version="14"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
       <WhatsAppButton />
     </>
   )
