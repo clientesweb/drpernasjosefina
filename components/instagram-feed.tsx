@@ -3,6 +3,17 @@
 import { useEffect } from 'react'
 import Script from 'next/script'
 
+// Add this type declaration at the top of the file
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void
+      }
+    }
+  }
+}
+
 export function InstagramFeed() {
   useEffect(() => {
     // Rerender Instagram embed after component mounts
