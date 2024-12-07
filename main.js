@@ -1,58 +1,130 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Lucide icons
-    lucide.createIcons();
-
     // Mobile menu toggle
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const navLinks = document.querySelector('.nav-links');
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-    if (mobileMenuButton && navLinks) {
-        mobileMenuButton.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-            mobileMenuButton.setAttribute('aria-expanded', 
-                navLinks.classList.contains('show'));
-            
-            // Toggle between menu and x icon
-            const menuIcon = mobileMenuButton.querySelector('i');
-            if (navLinks.classList.contains('show')) {
-                menuIcon.setAttribute('data-lucide', 'x');
-            } else {
-                menuIcon.setAttribute('data-lucide', 'menu');
-            }
-            lucide.createIcons();
+    navbarToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
-    }
+    });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (event) => {
-        if (navLinks.classList.contains('show') && 
-            !event.target.closest('nav')) {
-            navLinks.classList.remove('show');
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
-            const menuIcon = mobileMenuButton.querySelector('i');
-            menuIcon.setAttribute('data-lucide', 'menu');
-            lucide.createIcons();
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
     });
 
     // Testimonial slider
     const testimonialSlider = document.querySelector('.testimonial-slider');
-    const testimonials = document.querySelectorAll('.testimonial-card');
-    let currentTestimonial = 0;
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-    function showNextTestimonial() {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        testimonialSlider.style.transform = `translateX(-${currentTestimonial * 100}%)`;
-    }
+    testimonialSlider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - testimonialSlider.offsetLeft;
+        scrollLeft = testimonialSlider.scrollLeft;
+    });
 
-    setInterval(showNextTestimonial, 5000);
+    testimonialSlider.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
 
-    // WhatsApp notification
-    const whatsappButton = document.querySelector('.whatsapp-button');
-    const notification = whatsappButton.querySelector('.whatsapp-notification');
+    testimonialSlider.addEventListener('mouseup', () => {
+        isDown = false;
+    });
 
-    whatsappButton.addEventListener('click', () => {
-        notification.style.display = 'none';
+    testimonialSlider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - testimonialSlider.offsetLeft;
+        const walk = (x - startX) * 2;
+        testimonialSlider.scrollLeft = scrollLeft - walk;
+    });
+
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero section animation
+    gsap.from('.hero-content', {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power3.out'
+    });
+
+    // About section animation
+    gsap.from('.about-content', {
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top 80%'
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power3.out'
+    });
+
+    // Services animation
+    gsap.from('.service-card', {
+        scrollTrigger: {
+            trigger: '.services',
+            start: 'top 80%'
+        },
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power3.out'
+    });
+
+    // Testimonials animation
+    gsap.from('.testimonial-card', {
+        scrollTrigger: {
+            trigger: '.testimonials',
+            start: 'top 80%'
+        },
+        opacity: 0,
+        x: 100,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power3.out'
+    });
+
+    // Contact form animation
+    gsap.from('.contact-form, .contact-info', {
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top 80%'
+        },
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power3.out'
+    });
+
+    // WhatsApp button animation
+    gsap.from('.whatsapp-button', {
+        opacity: 0,
+        scale: 0.5,
+        duration: 1,
+        ease: 'elastic.out(1, 0.5)',
+        delay: 1
     });
 
     // Update current year in footer
