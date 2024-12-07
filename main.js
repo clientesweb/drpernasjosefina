@@ -6,9 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const navLinks = document.querySelector('.nav-links');
 
-    mobileMenuButton.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
+    if (mobileMenuButton && navLinks) {
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            mobileMenuButton.setAttribute('aria-expanded', 
+                navLinks.classList.contains('show'));
+        });
+    }
 
     // Hero slider
     const slides = document.querySelectorAll('.slide');
@@ -32,8 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide);
     }
 
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+    }
 
     // Auto-advance slides every 5 seconds
     setInterval(nextSlide, 5000);
@@ -49,16 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
         { image: 'instagram-6.jpg', caption: 'El poder de la terapia en el crecimiento personal' }
     ];
 
-    mockPosts.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.className = 'instagram-post';
-        postElement.innerHTML = `
-            <img src="${post.image}" alt="${post.caption}">
-            <p>${post.caption}</p>
-        `;
-        instagramFeed.appendChild(postElement);
-    });
+    if (instagramFeed) {
+        mockPosts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'instagram-post';
+            postElement.innerHTML = `
+                <img src="${post.image}" alt="${post.caption}">
+                <p>${post.caption}</p>
+            `;
+            instagramFeed.appendChild(postElement);
+        });
+    }
 
     // Update current year in footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const currentYearElement = document.getElementById('currentYear');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
 });
