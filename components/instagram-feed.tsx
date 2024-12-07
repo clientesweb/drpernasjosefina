@@ -3,7 +3,6 @@
 import { useEffect } from 'react'
 import Script from 'next/script'
 
-// Add this type declaration at the top of the file
 declare global {
   interface Window {
     instgrm?: {
@@ -15,8 +14,14 @@ declare global {
 }
 
 export function InstagramFeed() {
+  const instagramPosts = [
+    'https://www.instagram.com/p/C_l75FrMfXf/',
+    'https://www.instagram.com/p/CnXtp7lpm5D/',
+    'https://www.instagram.com/p/Ck6yeM8s1Q-/',
+    'https://www.instagram.com/p/CSIBJOWISua/'
+  ]
+
   useEffect(() => {
-    // Rerender Instagram embed after component mounts
     if (window.instgrm) {
       window.instgrm.Embeds.process()
     }
@@ -33,22 +38,16 @@ export function InstagramFeed() {
             Contenido diario sobre salud mental y bienestar
           </p>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/your-post-id/"
-            data-instgrm-version="14"
-          />
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/your-post-id-2/"
-            data-instgrm-version="14"
-          />
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/your-post-id-3/"
-            data-instgrm-version="14"
-          />
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {instagramPosts.map((post, index) => (
+            <blockquote
+              key={index}
+              className="instagram-media"
+              data-instgrm-captioned
+              data-instgrm-permalink={post}
+              data-instgrm-version="14"
+            />
+          ))}
         </div>
       </div>
       <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
