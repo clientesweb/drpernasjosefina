@@ -20,7 +20,14 @@ export default function BlogPage() {
               <Link href={`/blog/${i + 1}`}>
                 <div className="aspect-video relative">
                   <Image
-                    src={`/blog-${i + 1}.jpg`}
+                    src={`https://images.unsplash.com/photo-${[
+                      "1544027993-37dbfe43562a",
+                      "1573497019940-1c28c88b4f3e",
+                      "1590650153855-d9e808231d41",
+                      "1573497019418-b400bb3ab074",
+                      "1516585427167-9f4af9627e6c",
+                      "1609220136736-443140cffec6"
+                    ][i]}?q=80&w=2070&auto=format&fit=crop`}
                     alt="Blog post thumbnail"
                     fill
                     className="object-cover transition-transform hover:scale-105"
