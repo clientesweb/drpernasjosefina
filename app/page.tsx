@@ -12,10 +12,10 @@ import { FAQSection } from "@/components/faq-section"
 
 export default function Home() {
   const services = [
-    { title: 'Terapia Individual', icon: <Brain />, description: 'Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.' },
-    { title: 'Terapia de Pareja', icon: <Users />, description: 'Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.' },
-    { title: 'Consultas Online', icon: <Video />, description: 'Accede a terapia de calidad desde la comodidad de tu hogar con nuestras sesiones virtuales.' },
-    { title: 'Terapia Grupal', icon: <Users />, description: 'Participa en sesiones grupales para compartir experiencias y aprender de otros en un ambiente de apoyo.' },
+    { title: 'Terapia Individual', icon: <Brain className="h-6 w-6" />, description: 'Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.' },
+    { title: 'Terapia de Pareja', icon: <Users className="h-6 w-6" />, description: 'Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.' },
+    { title: 'Consultas Online', icon: <Video className="h-6 w-6" />, description: 'Accede a terapia de calidad desde la comodidad de tu hogar con nuestras sesiones virtuales.' },
+    { title: 'Terapia Grupal', icon: <Users className="h-6 w-6" />, description: 'Participa en sesiones grupales para compartir experiencias y aprender de otros en un ambiente de apoyo.' },
   ];
 
   return (
@@ -33,10 +33,12 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-            {services.slice(0, 4).map((service, index) => (
+            {services.map((service, index) => (
               <Card key={index} className="transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
-                  {service.icon}
+                  <div className="h-12 w-12 text-primary mb-4">
+                    {service.icon}
+                  </div>
                   <CardTitle>{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -115,7 +117,6 @@ export default function Home() {
         </div>
       </section>
 
-
       <section className="py-12 md:py-20">
         <div className="container px-4">
           <div className="text-center mb-12">
@@ -131,23 +132,7 @@ export default function Home() {
       </section>
 
       <FAQSection />
-      <section className="py-12 md:py-20">
-        <div className="container px-4">
-          <h2 className="font-playfair text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-            Síguenos en Instagram
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[...Array(4)].map((_, index) => (
-              <blockquote
-                key={index}
-                className="instagram-media"
-                data-instgrm-permalink={`https://www.instagram.com/p/your-post-id-${index + 1}/`}
-                data-instgrm-version="14"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <InstagramFeed />
       <WhatsAppButton />
     </>
   )
