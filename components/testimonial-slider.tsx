@@ -49,7 +49,7 @@ export function TestimonialSlider() {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-6 mx-4">
+          <Card key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-6 mx-auto">
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 {testimonial.name}
