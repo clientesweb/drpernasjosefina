@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
-    { media: '(prefers-color-scheme: dark)', color: '#262626' },
+    { media: '(prefers-color-scheme: light)', color: '#FF9B7B' },
+    { media: '(prefers-color-scheme: dark)', color: '#FF9B7B' },
   ],
   appleWebApp: {
     title: 'Dra. Josefina Pernas',
