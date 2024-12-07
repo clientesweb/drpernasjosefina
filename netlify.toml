@@ -2,15 +2,10 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  NEXT_USE_NETLIFY_EDGE = "true"
+  NEXT_PRIVATE_TARGET = "experimental-serverless-trace"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[build.environment]
-  NEXT_USE_NETLIFY_EDGE = "true"
-
-[build.processing.html]
-  pretty_urls = true
-
-[[edge_functions]]
-  function = "next-dev"
-  path = "/*"
