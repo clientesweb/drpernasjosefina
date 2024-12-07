@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Menu } from 'lucide-react'
 import Link from "next/link"
@@ -18,7 +18,8 @@ export function MobileNav() {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+      <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
+        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
         <div className="flex flex-col space-y-4 mt-8">
           <Link
             href="/"
@@ -69,4 +70,3 @@ export function MobileNav() {
     </Sheet>
   )
 }
-
