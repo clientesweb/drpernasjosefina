@@ -16,11 +16,11 @@ export default function AboutPage() {
 
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <Image
-            src="/dra-josefina-pernas.jpg"
+            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070&auto=format&fit=crop"
             alt="Dra. Josefina Pernas"
             width={400}
             height={500}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg object-cover"
           />
           <div className="space-y-4">
             <h2 className="font-playfair text-2xl font-semibold">Mi Trayectoria</h2>
