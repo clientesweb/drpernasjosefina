@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Brain, Users, Video, Star, Award, BookOpen } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
+import { FAQSection } from "@/components/faq-section"
 
 export default function Home() {
   return (
@@ -115,6 +116,7 @@ export default function Home() {
         </div>
       </section>
 
+      <FAQSection />
       <InstagramFeed />
       <WhatsAppButton />
     </>
