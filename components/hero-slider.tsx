@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 const slides = [
   {
@@ -42,7 +43,7 @@ export function HeroSlider() {
   }
 
   return (
-    <div className="relative h-[60vh] min-h-[500px] w-full overflow-hidden">
+    <div className="relative h-[1080px] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -58,14 +59,24 @@ export function HeroSlider() {
             priority={index === 0}
           />
           <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white space-y-4">
-              <h2 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold">
-                {slide.title}
-              </h2>
-              <p className="text-lg sm:text-xl md:text-2xl">
-                {slide.description}
-              </p>
+          <div className="absolute inset-0 flex items-center">
+            <div className="container px-4">
+              <div className="max-w-xl text-white space-y-6">
+                <h2 className="font-playfair text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+                  {slide.title}
+                </h2>
+                <p className="text-xl sm:text-2xl md:text-3xl">
+                  {slide.description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" asChild>
+                    <Link href="/contact">Agendar Consulta</Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <Link href="/services">Nuestros Servicios</Link>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
