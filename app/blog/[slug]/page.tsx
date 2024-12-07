@@ -2,6 +2,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from 'lucide-react'
 
+export async function generateStaticParams() {
+  // In a real application, this would fetch data from an API or database
+  const posts = Array.from({ length: 6 }, (_, i) => ({
+    slug: `${i + 1}`,
+  }));
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export default function BlogPost({ params }: { params: { slug: string } }) {
   // En una implementación real, aquí se obtendría el contenido del artículo basado en el slug
   const article = {
