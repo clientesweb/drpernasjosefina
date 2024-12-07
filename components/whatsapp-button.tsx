@@ -28,7 +28,7 @@ export function WhatsAppButton() {
           className="rounded-full h-14 w-14 bg-white hover:bg-gray-100 shadow-lg p-0"
         >
           <Image
-            src="/brain-logo.svg"
+            src="/logo.png"
             alt="Logo"
             width={40}
             height={40}
