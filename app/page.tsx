@@ -2,6 +2,7 @@ import { HeroSlider } from "@/components/hero-slider"
 import { VideoSection } from "@/components/video-section"
 import { InstagramFeed } from "@/components/instagram-feed"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { TestimonialSlider } from "@/components/testimonial-slider"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Brain, Users, Video, Star, Award, BookOpen } from 'lucide-react'
@@ -13,7 +14,7 @@ export default function Home() {
     <>
       <HeroSlider />
       
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container px-4">
           <div className="text-center mb-12">
             <h2 className="font-playfair text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -24,7 +25,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card>
+            <Card className="transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Brain className="h-12 w-12 text-primary mb-4" />
                 <CardTitle>Terapia Individual</CardTitle>
@@ -35,7 +36,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Users className="h-12 w-12 text-primary mb-4" />
                 <CardTitle>Terapia de Pareja</CardTitle>
@@ -46,7 +47,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Video className="h-12 w-12 text-primary mb-4" />
                 <CardTitle>Consultas Online</CardTitle>
@@ -61,7 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-secondary/10">
+      <section className="py-12 md:py-20 bg-secondary/10">
         <div className="container px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div>
@@ -86,7 +87,7 @@ export default function Home() {
                 <Link href="/about">Conoce más sobre mí</Link>
               </Button>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
+            <div className="relative h-[300px] sm:h-[400px] rounded-lg overflow-hidden">
               <Image
                 src="/dra-josefina-pernas.jpg"
                 alt="Dra. Josefina Pernas"
@@ -100,7 +101,7 @@ export default function Home() {
 
       <VideoSection />
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container px-4">
           <div className="text-center mb-12">
             <h2 className="font-playfair text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -110,31 +111,7 @@ export default function Home() {
               Descubre cómo hemos ayudado a otros a mejorar su calidad de vida
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: "María L.",
-                text: "La Dra. Pernas me ha ayudado enormemente a superar mi ansiedad. Su enfoque cálido y profesional me hizo sentir cómoda desde la primera sesión."
-              },
-              {
-                name: "Carlos G.",
-                text: "Gracias a la terapia con la Dra. Josefina, he podido mejorar significativamente mis relaciones personales y laborales. Su guía ha sido invaluable."
-              },
-              {
-                name: "Laura S.",
-                text: "Las sesiones online con la Dra. Pernas han sido una bendición. Puedo recibir ayuda de calidad sin salir de casa, lo cual es perfecto para mi agenda ocupada."
-              }
-            ].map((testimonial, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle>{testimonial.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>"{testimonial.text}"</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <TestimonialSlider />
         </div>
       </section>
 
