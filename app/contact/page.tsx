@@ -7,7 +7,7 @@ import * as z from 'zod'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "../components/ui/use-toast"
+import { useToast } from "@/components/ui/use-toast"
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "El nombre debe tener al menos 2 caracteres." }),
