@@ -82,6 +82,7 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t pt-8 text-center text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Dra. Josefina Pernas. Todos los derechos reservados.</p>
+          <p className="mt-2 text-sm">Powered by duality domain</p>
         </div>
       </div>
     </footer>
