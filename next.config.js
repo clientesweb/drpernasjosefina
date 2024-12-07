@@ -9,6 +9,17 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.externals = [
+        ...(config.externals || []),
+        'react-hook-form',
+        '@hookform/resolvers/zod',
+        'zod',
+      ]
+    }
+    return config
+  },
 }
 
 module.exports = nextConfig
