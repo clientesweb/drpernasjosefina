@@ -8,17 +8,17 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "/slide-1.jpg",
+    image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop",
     title: "Salud Mental Integral",
     description: "Cuidando tu bienestar emocional"
   },
   {
-    image: "/slide-2.jpg",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070&auto=format&fit=crop",
     title: "Terapia Personalizada",
     description: "Enfoque adaptado a tus necesidades"
   },
   {
-    image: "/slide-3.jpg",
+    image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?q=80&w=2070&auto=format&fit=crop",
     title: "Consultas Online",
     description: "Atención profesional desde cualquier lugar"
   }
