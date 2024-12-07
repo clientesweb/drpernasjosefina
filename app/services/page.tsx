@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Brain, Users, Video, Sparkles, Zap, HeartPulse } from 'lucide-react'
 
 const services = [
@@ -50,12 +50,12 @@ export default function ServicesPage() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Card key={index}>
-              <CardHeader><CardHeader>
+              <CardHeader>
                 <service.icon className="h-12 w-12 text-primary mb-4" />
                 <CardTitle>{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>{service.description}</CardDescription>
+                <p className="text-muted-foreground">{service.description}</p>
               </CardContent>
             </Card>
           ))}
