@@ -20,7 +20,7 @@ export default function ContactPage() {
     resolver: zodResolver(formSchema),
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
+  const { showToast } = useToast()
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true)
@@ -34,7 +34,7 @@ export default function ContactPage() {
       })
 
       if (response.ok) {
-        toast({
+        showToast({
           title: "Mensaje enviado",
           description: "Gracias por contactarnos. Te responderemos pronto.",
         })
@@ -43,7 +43,7 @@ export default function ContactPage() {
         throw new Error('Error al enviar el formulario')
       }
     } catch (error) {
-      toast({
+      showToast({
         title: "Error",
         description: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
         variant: "destructive",
