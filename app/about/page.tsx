@@ -7,16 +7,16 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="space-y-4">
           <h1 className="font-playfair text-4xl font-bold tracking-tighter sm:text-5xl">
-            Sobre Dra. Josefina Pernas
+            Dra. Josefina Pernas
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            Psiquiatra especializada en salud mental, dedicada a mejorar la calidad de vida de mis pacientes
+            Médica Especialista en Psiquiatría - MN 140.051
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <Image
-            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070&auto=format&fit=crop"
+            src="/about.jpg"
             alt="Dra. Josefina Pernas"
             width={400}
             height={500}
@@ -25,30 +25,31 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h2 className="font-playfair text-2xl font-semibold">Mi Trayectoria</h2>
             <p className="text-muted-foreground">
-              Con más de 15 años de experiencia en el campo de la psiquiatría, me he dedicado a ayudar a mis pacientes a superar desafíos emocionales y mentales. Mi enfoque se centra en un tratamiento integral que combina la terapia tradicional con técnicas innovadoras.
+              Con más de 15 años de experiencia en el campo de la Salud Mental, me he dedicado a acompañar a mis pacientes a superar desafíos emocionales y problemáticas que se presentaban a lo largo de su vida.
             </p>
             <p className="text-muted-foreground">
-              Me gradué de la Universidad de Buenos Aires y realicé mi especialización en el Hospital de Clínicas. Desde entonces, he continuado mi formación con cursos y certificaciones internacionales para ofrecer el mejor cuidado posible.
+              Me gradué en la Universidad Abierta Interamericana y realicé mi residencia en Salud Mental en el Hospital Dr. César Milstein. Además, hice la carrera de Especialista en Psiquiatría en la UBA.
+            </p>
+            <p className="text-muted-foreground">
+              Desde entonces he continuado mi formación con cursos, posgrados y capacitaciones para ofrecer una atención de calidad.
             </p>
           </div>
         </div>
 
         <div className="space-y-4">
-          <h2 className="font-playfair text-2xl font-semibold">Mi Filosofía</h2>
-          <p className="text-muted-foreground">
-            Creo firmemente en el poder de la empatía y la comprensión en el proceso terapéutico. Cada paciente es único, y mi objetivo es proporcionar un espacio seguro y de confianza donde puedan explorar sus emociones y trabajar hacia una mejor salud mental.
-          </p>
+          <h2 className="font-playfair text-2xl font-semibold">Formación Académica</h2>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+            <li>Graduada de la Universidad Abierta Interamericana</li>
+            <li>Residencia en Salud Mental en el Hospital Dr. César Milstein</li>
+            <li>Especialista en Psiquiatría - Universidad de Buenos Aires (UBA)</li>
+          </ul>
         </div>
 
         <div className="space-y-4">
-          <h2 className="font-playfair text-2xl font-semibold">Áreas de Especialización</h2>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Trastornos de ansiedad y depresión</li>
-            <li>Terapia de pareja y familiar</li>
-            <li>Manejo del estrés y burnout</li>
-            <li>Trastornos del sueño</li>
-            <li>Adicciones y comportamientos compulsivos</li>
-          </ul>
+          <h2 className="font-playfair text-2xl font-semibold">Contacto</h2>
+          <p className="text-muted-foreground">
+            Teléfono: +54 9 11 4196-6665
+          </p>
         </div>
 
         <div className="flex justify-center">
