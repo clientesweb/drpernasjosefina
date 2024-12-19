@@ -25,13 +25,16 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h2 className="font-playfair text-2xl font-semibold">Mi Trayectoria</h2>
             <p className="text-muted-foreground">
-              Con más de 15 años de experiencia en el campo de la Salud Mental, me he dedicado a acompañar a mis pacientes a superar desafíos emocionales y problemáticas que se presentaban a lo largo de su vida.
+              Desarrollo actualmente mi actividad profesional en el ámbito clínico como médica de planta en el servicio de Salud Mental del Hospital General de Agudos J M Penna.
             </p>
             <p className="text-muted-foreground">
-              Me gradué en la Universidad Abierta Interamericana y realicé mi residencia en Salud Mental en el Hospital Dr. César Milstein. Además, hice la carrera de Especialista en Psiquiatría en la UBA.
+              Trabajo también como psiquiatra en el ámbito de urgencias en el sistema público y en el ámbito privado.
             </p>
             <p className="text-muted-foreground">
-              Desde entonces he continuado mi formación con cursos, posgrados y capacitaciones para ofrecer una atención de calidad.
+              Soy docente de la Universidad de Buenos Aires y de la Universidad Católica Argentina, en el área de Salud Mental.
+            </p>
+            <p className="text-muted-foreground">
+              Realizo atención presencial y virtual en mi consultorio con iguales posibilidades de atención y efectividad.
             </p>
           </div>
         </div>
@@ -39,9 +42,9 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h2 className="font-playfair text-2xl font-semibold">Formación Académica</h2>
           <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Graduada de la Universidad Abierta Interamericana</li>
-            <li>Residencia en Salud Mental en el Hospital Dr. César Milstein</li>
-            <li>Especialista en Psiquiatría - Universidad de Buenos Aires (UBA)</li>
+            <li>Médica graduada en la Universidad Abierta Interamericana</li>
+            <li>Residencia en Psiquiatría en Hospital Dr. Cesar Milstein</li>
+            <li>Especialista en Psiquiatría Universidad de Buenos Aires (UBA)</li>
           </ul>
         </div>
 
@@ -49,6 +52,9 @@ export default function AboutPage() {
           <h2 className="font-playfair text-2xl font-semibold">Contacto</h2>
           <p className="text-muted-foreground">
             Teléfono: +54 9 11 4196-6665
+          </p>
+          <p className="text-muted-foreground">
+            Email: jpgrenno@gmail.com
           </p>
         </div>
 
