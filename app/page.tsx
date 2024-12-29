@@ -5,17 +5,33 @@ import { WhatsAppButton } from "@/components/whatsapp-button"
 import { TestimonialSlider } from "@/components/testimonial-slider"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Brain, Users, Video, Star, Award, BookOpen } from 'lucide-react'
+import { Brain, Video, Star, Award, BookOpen, Laptop, Pill, Zap } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
 import { FAQSection } from "@/components/faq-section"
 
 export default function Home() {
   const services = [
-    { title: 'Terapia Individual', icon: <Brain className="h-6 w-6" />, description: 'Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.' },
-    { title: 'Terapia de Pareja', icon: <Users className="h-6 w-6" />, description: 'Mejora tu relación y fortalece los lazos con tu pareja a través de sesiones guiadas.' },
-    { title: 'Consultas Online', icon: <Video className="h-6 w-6" />, description: 'Accede a terapia de calidad desde la comodidad de tu hogar con nuestras sesiones virtuales.' },
-    { title: 'Terapia Grupal', icon: <Users className="h-6 w-6" />, description: 'Participa en sesiones grupales para compartir experiencias y aprender de otros en un ambiente de apoyo.' },
+    { 
+      title: 'Terapia Individual', 
+      icon: <Brain className="h-6 w-6" />, 
+      description: 'Sesiones personalizadas para abordar tus necesidades específicas y promover tu crecimiento personal.' 
+    },
+    { 
+      title: 'Consultas Online y Presenciales', 
+      icon: <Laptop className="h-6 w-6" />, 
+      description: 'Accede a terapia de calidad desde la comodidad de tu hogar o en consulta presencial según tu preferencia.' 
+    },
+    { 
+      title: 'Psiquiatría Clínica', 
+      icon: <Pill className="h-6 w-6" />, 
+      description: 'Tratamientos psicoterapéuticos y farmacológicos adaptados a tus necesidades específicas.' 
+    },
+    { 
+      title: 'Manejo del Estrés', 
+      icon: <Zap className="h-6 w-6" />, 
+      description: 'Desarrolla estrategias efectivas para manejar el estrés y la ansiedad en tu vida diaria.' 
+    },
   ];
 
   return (
