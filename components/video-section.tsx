@@ -18,8 +18,8 @@ export function VideoSection() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Video sobre manejo del estrés"
+              src="https://www.youtube.com/embed/TjqrualxgkI"
+              title="La neurociencia de las emociones"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg shadow-lg"
@@ -29,8 +29,8 @@ export function VideoSection() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Técnicas de relajación"
+              src="https://www.youtube.com/embed/BXSuiBTBI6c"
+              title="Versión Completa"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg shadow-lg"
@@ -40,8 +40,8 @@ export function VideoSection() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Cómo mejorar tu autoestima"
+              src="https://www.youtube.com/embed/-rD7COiH67I"
+              title="Salud Mental"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg shadow-lg"
