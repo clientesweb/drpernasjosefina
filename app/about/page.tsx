@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import { ConsultationButton } from "@/components/ConsultationButton"
 
 export default function AboutPage() {
   return (
@@ -59,11 +59,10 @@ export default function AboutPage() {
         </div>
 
         <div className="flex justify-center">
-          <Button size="lg" onClick={() => window.open('https://wa.me/5491141966665', '_blank')}>
-            Agendar una Consulta
-          </Button>
+          <ConsultationButton />
         </div>
       </div>
     </div>
   )
 }
+
