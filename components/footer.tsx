@@ -21,7 +21,8 @@ export function Footer() {
               <span className="font-playfair text-lg font-bold">Dra. Josefina Pernas</span>
             </Link>
             <p className="text-muted-foreground">
-              Psiquiatra especializada en salud mental. Consultas presenciales y virtuales.
+              Médica especialista en Psiquiatría 
+Consultas presenciales y virtuales.
             </p>
           </div>
           <div>
