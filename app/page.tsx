@@ -89,33 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20">
-        <div className="container px-4">
-          <h2 className="font-playfair text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-            Recursos y Charlas
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-            {[...Array(4)].map((_, index) => (
-              <div key={index} className="aspect-video">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title={`Video ${index + 1}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="rounded-lg shadow-lg"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Button asChild>
-              <Link href="/resources">Ver más recursos</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <VideoSection />
 
       <section className="py-12 md:py-20">
         <div className="container px-4">
