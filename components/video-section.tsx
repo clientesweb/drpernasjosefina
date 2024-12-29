@@ -13,13 +13,13 @@ export function VideoSection() {
             Aprende más sobre salud mental a través de nuestros videos educativos
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="aspect-video">
             <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/TjqrualxgkI"
-              title="La neurociencia de las emociones"
+              title="Salud Mental y Bienestar Emocional"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg shadow-lg"
@@ -30,7 +30,7 @@ export function VideoSection() {
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/BXSuiBTBI6c"
-              title="Versión Completa"
+              title="Cómo Cuidar tu Salud Mental"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg shadow-lg"
@@ -41,7 +41,18 @@ export function VideoSection() {
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/-rD7COiH67I"
-              title="Salud Mental"
+              title="Salud Mental: Cómo Cuidarla"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="aspect-video">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/0noAwrWY78U"
+              title="Salud Mental: Cómo Cuidarla"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg shadow-lg"
