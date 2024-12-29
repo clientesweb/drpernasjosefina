@@ -12,7 +12,7 @@ const services = [
   {
     icon: Video,
     title: "Consultas Online y Presenciales",
-    description: "Flexibilidad para elegir entre sesiones virtuales desde la comodidad de tu hogar o consultas presenciales en el consultorio.",
+    description: "Accede a terapia de calidad desde la comodidad de tu hogar o en consulta presencial según tu preferencia.",
     image: "https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=2070&auto=format&fit=crop"
   },
   {
@@ -69,15 +69,7 @@ export default function ServicesPage() {
             </Card>
           ))}
         </div>
-
-        <div className="mt-12 text-center">
-          <h2 className="font-playfair text-3xl font-semibold mb-4">Terapia de Aceptación y Compromiso (ACT)</h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            La terapia de aceptación y compromiso (ACT) es un modelo de psicoterapia que se centra en la aceptación, el compromiso y el cambio de comportamiento. Su objetivo es ayudar a los pacientes a crear una vida significativa y a reorientarla.
-          </p>
-        </div>
       </div>
     </div>
   )
 }
-
