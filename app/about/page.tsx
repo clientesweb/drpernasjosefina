@@ -24,14 +24,24 @@ export default function AboutPage() {
           />
           <div className="space-y-6">
             <div>
-              <h2 className="font-playfair text-2xl font-semibold mb-3">Trayectoria y Formación</h2>
-              <ul className="space-y-2 text-muted-foreground">
+              <h2 className="font-playfair text-2xl font-semibold mb-3">Experiencia y Formación</h2>
+              <p className="text-muted-foreground mb-4">
+                Con más de 15 años de experiencia en el campo de la Salud Mental, me he dedicado a acompañar a mis pacientes a superar desafíos emocionales y problemáticas que se presentaban a lo largo de su vida.
+              </p>
+              <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                 <li>Médica graduada en la Universidad Abierta Interamericana</li>
-                <li>Residencia en Psiquiatría en Hospital Dr. Cesar Milstein</li>
-                <li>Especialista en Psiquiatría Universidad de Buenos Aires (UBA)</li>
+                <li>Residencia en Salud Mental en el Hospital Dr. César Milstein</li>
+                <li>Especialista en Psiquiatría por la Universidad de Buenos Aires (UBA)</li>
+                <li>Formación continua con cursos, posgrados y capacitaciones para ofrecer una atención de calidad</li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-playfair text-2xl font-semibold mb-3">Actividad Profesional Actual</h2>
+              <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                 <li>Médica de planta en el servicio de Salud Mental del Hospital General de Agudos J M Penna</li>
                 <li>Psiquiatra en el ámbito de urgencias en el sistema público y privado</li>
-                <li>Docente en la Universidad de Buenos Aires y la Universidad Católica Argentina</li>
+                <li>Docente en la Universidad de Buenos Aires y la Universidad Católica Argentina en el área de Salud Mental</li>
+                <li>Atención presencial y virtual en consultorio privado</li>
               </ul>
             </div>
             <div>
