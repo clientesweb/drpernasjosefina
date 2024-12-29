@@ -47,7 +47,7 @@ Consultas presenciales y virtuales.
             <div className="space-y-2">
               <a href="tel:+54 9 11 4196-6665" className="flex items-center text-muted-foreground hover:text-primary">
                 <FontAwesomeIcon icon={faPhone} className="h-4 w-4 mr-2" />
-                +123 456 789
+                +54 9 11 4196-6665
               </a>
               <a href="mailto:jpgrenno@gmail.com" className="flex items-center text-muted-foreground hover:text-primary">
                 <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 mr-2" />
