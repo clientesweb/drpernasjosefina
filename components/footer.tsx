@@ -45,13 +45,13 @@ Consultas presenciales y virtuales.
           <div>
             <h3 className="font-bold mb-4">Contacto</h3>
             <div className="space-y-2">
-              <a href="tel:+123456789" className="flex items-center text-muted-foreground hover:text-primary">
+              <a href="tel:+54 9 11 4196-6665" className="flex items-center text-muted-foreground hover:text-primary">
                 <FontAwesomeIcon icon={faPhone} className="h-4 w-4 mr-2" />
                 +123 456 789
               </a>
-              <a href="mailto:contacto@example.com" className="flex items-center text-muted-foreground hover:text-primary">
+              <a href="mailto:jpgrenno@gmail.com" className="flex items-center text-muted-foreground hover:text-primary">
                 <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 mr-2" />
-                contacto@example.com
+                jpgrenno@gmail.com
               </a>
               <a href="https://instagram.com/drapernasjosefina" className="flex items-center text-muted-foreground hover:text-primary">
                 <FontAwesomeIcon icon={faInstagram} className="h-4 w-4 mr-2" />
