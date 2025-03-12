@@ -14,6 +14,38 @@ export default function BlogPage() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 6 }).map((_, i) => {
+            if (i === 0) {
+              return (
+                <Card key="calm-mind" className="overflow-hidden">
+                  <Link href="/blog/una-mente-tranquila">
+                    <div className="aspect-video relative">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file-1EE5UxJekiqdgAtQABX4ZJ-iZjn4RGaFos3HcyqMYjvSLw3jpYqpU.webp"
+                        alt="Persona meditando al atardecer en la montaña"
+                        fill
+                        className="object-cover transition-transform hover:scale-105"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="line-clamp-2 hover:text-primary">Una Mente Tranquila</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        {new Date().toLocaleDateString("es-ES", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </p>
+                      <p className="line-clamp-3 text-muted-foreground">
+                        ¿Te ha pasado que no puedes parar de pensar? Descubre cómo encontrar la calma mental y mejorar
+                        tu bienestar emocional.
+                      </p>
+                    </CardContent>
+                  </Link>
+                </Card>
+              )
+            }
             if (i === 2) {
               return (
                 <Card key="sleep-habits" className="overflow-hidden">
